@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const fileUpload = require('express-fileUpload');
+// const fileUpload = require('express-fileUpload');
 const {dbConnection} = require('../database/config');
 
 class Server{
@@ -12,7 +12,7 @@ class Server{
         this.paths = {
             usuarios: '/api/usuarios',
             auth: '/api/auth',
-            uploads: '/api/uploads',
+            // uploads: '/api/uploads',
             reportes: '/api/reportes',
             tipos: '/api/tipos',
             habitad: '/api/habitad',
@@ -42,19 +42,19 @@ class Server{
         //Lectura y parseo del body
         this.app.use(express.json());
 
-        //Carga de archivos
-        this.app.use(fileUpload({
-            useTempFiles : true,
-            tempFileDir : '/tmp/',
-            createParentPath:true
-        }));
+        // //Carga de archivos
+        // this.app.use(fileUpload({
+        //     useTempFiles : true,
+        //     tempFileDir : '/tmp/',
+        //     createParentPath:true
+        // }));
 
     }
 
     router(){
         this.app.use(this.paths.auth,require('../routes/auth'));
         this.app.use(this.paths.usuarios,require('../routes/user'));
-        this.app.use(this.paths.uploads,require('../routes/uploads'));
+        // this.app.use(this.paths.uploads,require('../routes/uploads'));
         this.app.use(this.paths.tipos, require('../routes/tipo'));
         this.app.use(this.paths.habitad, require('../routes/habitad'));
         this.app.use(this.paths.reportes, require('../routes/reportes'));
