@@ -3,20 +3,49 @@ const Reporte = require('../models/reporte');
 
 const getReportes = async (req, res) => {
 
-    const reportes = await Reporte.find({});
+    const {limite=5, desde=0, tipo='todos'} = req.query;
 
-    if (!reportes) {
-        return res.status(404).json({
-            ok: false,
-            msg: 'No hay reportes'
+    try {
+
+        if(tipo === 'todos'){
+            const [total, reportes] = await Promise.all([
+                Reporte.countDocuments({}),
+                Reporte.find({})
+                .skip(Number(desde))
+                .limit(Number(limite))
+            ]);
+        }else if(tipo === 'finalizados'){
+            const [total, reportes] = await Promise.all([
+                Reporte.countDocuments({finalizado: true}),
+                Reporte.find({finalizado: true})
+                .skip(Number(desde))
+                .limit(Number(limite))
+            ]);
+        }else if(tipo === 'noFinalizados'){
+            const [total, reportes] = await Promise.all([
+                Reporte.countDocuments({finalizado: false}),
+                Reporte.find({finalizado: false})
+                .skip(Number(desde))
+                .limit(Number(limite))
+            ]);
+        }
+
+
+        if (!reportes) {
+            return res.status(404).json({
+                ok: false,
+                msg: 'No se encontraron los reportes'
+            });
+        }
+    
+        res.status(200).json({
+            total,
+            reportes
         });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({msg:'Hubo un error'});
     }
-
-    res.status(200).json({
-        ok: true,
-        reportes
-    });
-
 }
 
 const getReporte = async (req, res) => {
