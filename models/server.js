@@ -57,7 +57,7 @@ class Server{
         this.app.use(this.paths.uploads,require('../routes/uploads'));
         this.app.use(this.paths.tipos, require('../routes/tipo'));
         this.app.use(this.paths.habitad, require('../routes/habitad'));
-        this.app.use(this.paths.reportes, require('../routes/reporte'));
+        this.app.use(this.paths.reportes, require('../routes/reportes'));
         this.app.use(this.paths.estado, require('../routes/estado'));
         this.app.use(this.paths.especie, require('../routes/especie'));
     }
