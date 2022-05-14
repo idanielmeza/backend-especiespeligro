@@ -2,8 +2,16 @@ const Tipo = require('../models');
 
 const getTipos = async (req, res) => {
     try {
-        const tipos = await Tipo.find();
-        res.status(200).json(tipos);
+        const [total, tipos] = await Promise.all([
+            Tipo.countDocuments(),
+            Tipo.find()
+            .skip(Number(desde))
+            .limit(Number(limite))
+        ])
+        res.status(200).json({
+            total,
+            tipos
+        });
     } catch (error) {
         res.status(500).json({ msg: 'Hubo un error' });
     }
