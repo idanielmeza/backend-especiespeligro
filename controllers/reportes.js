@@ -3,33 +3,25 @@ const Reporte = require('../models/reporte');
 
 const getReportes = async (req, res) => {
 
-    const {limite=5, desde=0, tipo='todos'} = req.query;
+    const {limite=5, desde=0, tipo} = req.query;
+    
+    let bandera = false;
+
+    if(tipo === 'finalizados'){
+        bandera = true;
+    }else if(tipo === 'noFinalizados'){
+        bandera = false;
+    }
+
+    console.log(bandera)
 
     try {
-
-        if(tipo === 'todos'){
-            const [total, reportes] = await Promise.all([
-                Reporte.countDocuments({}),
-                Reporte.find({})
-                .skip(Number(desde))
-                .limit(Number(limite))
-            ]);
-        }else if(tipo === 'finalizados'){
-            const [total, reportes] = await Promise.all([
-                Reporte.countDocuments({finalizado: true}),
-                Reporte.find({finalizado: true})
-                .skip(Number(desde))
-                .limit(Number(limite))
-            ]);
-        }else if(tipo === 'noFinalizados'){
-            const [total, reportes] = await Promise.all([
-                Reporte.countDocuments({finalizado: false}),
-                Reporte.find({finalizado: false})
-                .skip(Number(desde))
-                .limit(Number(limite))
-            ]);
-        }
-
+        const [total, reportes] = await Promise.all([
+            Reporte.countDocuments({finalizado: bandera}),
+            Reporte.find({finalizado: bandera})
+            .skip(Number(desde))
+            .limit(Number(limite))
+        ]);
 
         if (!reportes) {
             return res.status(404).json({
