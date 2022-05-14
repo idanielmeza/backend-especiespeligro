@@ -23,6 +23,9 @@ const especieSchema = new Schema({
         type: [Schema.Types.ObjectId],
         ref: 'Habitad',
     },
+    problematica:{
+        type: Number
+    }
 });
 
 module.exports = model('Especie',especieSchema);
