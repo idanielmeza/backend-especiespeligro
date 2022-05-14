@@ -2,16 +2,17 @@
   "name": "07-restserver",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "nodemon app",
-    "start": "node app"
+    "dev": "nodemon .",
+    "start": "node app",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^28.1.0",
+    "jest": "^26.1.0",
     "nodemon": "^2.0.11"
   },
   "dependencies": {
