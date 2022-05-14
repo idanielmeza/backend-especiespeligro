@@ -15,13 +15,13 @@ router.get('/:id', [
 ],getHabitad);
 
 router.post('/', [
-    check('habitad','El habitad es obligatorio').not().isEmpty().trim().escape(),
+    check('nombre','El habitad es obligatorio').not().isEmpty().trim().escape(),
     validarCampos
 ],postHabitad);
 
 router.put('/:id',[
     check('id', 'El id es obligatorio').isMongoId(),
-    check('habitad','El habitad es obligatorio').not().isEmpty().trim().escape(),
+    check('nombre','El habitad es obligatorio').not().isEmpty().trim().escape(),
     validarCampos
 ],putHabitad)
 
