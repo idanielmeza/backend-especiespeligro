@@ -23,7 +23,7 @@ router.post('/', [
     check('email', 'El email es obligatorio').not().isEmpty().trim().escape(),
     check('ubicacion', 'La ubicacion es obligatoria').not().isEmpty().trim().escape(),
     check('estado', 'El estado es obligatorio').not().isEmpty().trim().escape(),
-    check('finalizado', 'El finalizado es obligatorio').not().isEmpty().trim().escape(),
+    // check('finalizado', 'El finalizado es obligatorio').not().isEmpty().trim().escape(),
     validarCampos,
     // validarJWT
 ],postReportes);

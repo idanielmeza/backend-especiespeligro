@@ -1,7 +1,8 @@
-const Tipo = require('../models');
+const Tipo = require('../models/tipo');
 
 const getTipos = async (req, res) => {
     try {
+        const { desde = 0, limite = 5 } = req.query;
         const [total, tipos] = await Promise.all([
             Tipo.countDocuments(),
             Tipo.find()
@@ -32,6 +33,7 @@ const postTipo = async (req, res) => {
         await tipo.save();
         res.status(201).json(tipo);
     } catch (error) {
+        console.log(error);
         res.status(500).json({ msg: 'Hubo un error' });
     }
 }

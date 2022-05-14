@@ -2,17 +2,22 @@ const Especie = require('../models/especie');
 
 const getEspecies = async(req,res)=>{
     try{
+        const {desde=0,limite=5} = req.query;
         const [total, especies] = await Promise.all([
-            Especie.countDocuments({estado: true}),
-            Especie.find({estado: true})
+            Especie.countDocuments(),
+            Especie.find()
             .skip(Number(desde))
             .limit(Number(limite))
+            .populate('tipo')
+            .populate('estado')
+            .populate('habitad')
         ])
         res.status(200).json({
             total,
             especies
         });
     }catch(error){
+        console.log(error);
         res.status(500).json({msg:'Hubo un error'});
     }
 }

@@ -2,6 +2,7 @@ const Habitad = require('../models/habitad');
 
 const getHabitads = async(req,res) => {
     try {
+        const {desde=0,limite=5} = req.query;
         const [total, habitads] = await Promise.all([
             Habitad.countDocuments(),
             Habitad.find()
