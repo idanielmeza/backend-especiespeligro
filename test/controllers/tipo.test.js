@@ -17,7 +17,7 @@ describe("Test para controlador tipo", () => {
     test("1. Error en la función getTipos", async () => {
       const req = mockRequest();
       const res = mockResponse();
-      getTipos(req, res);
+      await getTipos(req, res);
       expect(res.status).toHaveBeenCalledWith(500);
       expect(res.json).toHaveBeenCalledWith({ msg: 'Hubo un error' })
     });
@@ -25,7 +25,7 @@ describe("Test para controlador tipo", () => {
     test("2. Error en la función getTipo", async () => {
         const req = mockRequest();
         const res = mockResponse();
-        getTipo(req, res);
+        await getTipo(req, res);
         expect(res.status).toHaveBeenCalledWith(500);
         expect(res.json).toHaveBeenCalledWith({ msg: 'Hubo un error' })
     });
@@ -33,7 +33,7 @@ describe("Test para controlador tipo", () => {
     test("3. Error en la función postTipo", async () => {
         const req = mockRequest();
         const res = mockResponse();
-        postTipo(req, res);
+        await postTipo(req, res);
         expect(res.status).toHaveBeenCalledWith(500);
         expect(res.json).toHaveBeenCalledWith({ msg: 'Hubo un error' })
     });
@@ -41,7 +41,7 @@ describe("Test para controlador tipo", () => {
     test("4. Error en la función putTipo", async () => {
         const req = mockRequest();
         const res = mockResponse();
-        putTipo(req, res);
+        await putTipo(req, res);
         expect(res.status).toHaveBeenCalledWith(500);
         expect(res.json).toHaveBeenCalledWith({ msg: 'Hubo un error' })
     });
