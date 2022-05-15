@@ -79,11 +79,23 @@ classDiagram
 #### Tipos
 **https://hacktheoceanback.azurewebsites.net/api/tipos/ (método GET).** Regresa todos los tipos de especies en la base de datos.
 **https://hacktheoceanback.azurewebsites.net/api/tipos/:id (método GET).** Regresa el tipo de especie según el id indicado en el parámetro.
+
 **https://hacktheoceanback.azurewebsites.net/api/tipos/ (método POST).** Agrega un tipo de especie a la base de datos.
 **https://hacktheoceanback.azurewebsites.net/api/tipos/ (método PUT).** Actualiza un tipo de especie en la base de datos.
 | GET tipos | GET tipos/:id |
 | --- | --- |
 |  <img width="686" alt="Screen Shot 2022-05-15 at 10 26 06" src="https://user-images.githubusercontent.com/54159730/168485883-be2e7e7f-c13f-40f6-bf52-f747a6a46887.png"> | <img width="686" alt="Screen Shot 2022-05-15 at 10 26 27" src="https://user-images.githubusercontent.com/54159730/168485885-366e569c-09d5-4050-9b54-2e8c16c28dc5.png"> |
+
+#### Habitad
+**https://hacktheoceanback.azurewebsites.net/api/habitad/ (método GET).** Regresa todos las habitats en la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/habitad/:id (método GET).** Regresa el habitat según el id indicado en el parámetro.
+
+**https://hacktheoceanback.azurewebsites.net/api/habitad/ (método POST).** Agrega un habitat a la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/habitad/ (método PUT).** Actualiza un habitat en la base de datos.
+| GET tipos | GET tipos/:id |
+| --- | --- |
+|  <img width="686" alt="Screen Shot 2022-05-15 at 10 29 30" src="https://user-images.githubusercontent.com/54159730/168486081-59154f10-2622-4834-a3ca-f429db967fb4.png"> | <img width="686" alt="Screen Shot 2022-05-15 at 10 26 27" src="https://user-images.githubusercontent.com/54159730/168485885-366e569c-09d5-4050-9b54-2e8c16c28dc5.png"> |
+
 
 ### Pruebas Unitarias
 Se realizaron pruebas unitarias, implementadas mediante Jest, al módulo de helpers, como el método de subir archivo, así como a los controladores, es decir, los métodos de la clase especie, estado, habitad, tipo y uploads.
