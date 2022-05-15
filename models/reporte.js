@@ -1,4 +1,4 @@
-const {model,Schema} = require('mongoose');
+const {model,Schema} = require("mongoose");
 
 const reporteSchema = new Schema({
     titulo:{
@@ -20,7 +20,7 @@ const reporteSchema = new Schema({
     },
     estado:{
         type: Schema.Types.ObjectId,
-        ref: 'Estado'
+        ref: "Estado"
     },
     finalizado:{
         type: Boolean,
@@ -28,4 +28,4 @@ const reporteSchema = new Schema({
     }
 });
 
-module.exports = model('Reporte',reporteSchema);
+module.exports = model("Reporte",reporteSchema);

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const dbConnection = async()=>{
 
@@ -11,16 +11,16 @@ const dbConnection = async()=>{
             useFindAndModify: false
         });
 
-        console.log('Base de datos conectada');
+        console.log("Base de datos conectada");
 
 
     } catch (error) {
         console.log(error);
-        throw new Error('Error al inicar la base de datos');
+        throw new Error("Error al inicar la base de datos");
     }
 
-}
+};
 
 module.exports = {
     dbConnection
-}
+};

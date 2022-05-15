@@ -1,4 +1,4 @@
-const {model,Schema} = require('mongoose');
+const {model,Schema} = require("mongoose");
 
 const habitadSchema = new Schema({
     nombre: {
@@ -8,4 +8,4 @@ const habitadSchema = new Schema({
     }
 });
 
-module.exports = model('Habitad',habitadSchema);
+module.exports = model("Habitad",habitadSchema);

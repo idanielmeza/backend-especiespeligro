@@ -1,4 +1,4 @@
-const {model,Schema} = require('mongoose');
+const {model,Schema} = require("mongoose");
 
 const estadoSchema = new Schema({
     nombre: {
@@ -8,4 +8,4 @@ const estadoSchema = new Schema({
     }
 });
 
-module.exports = model('Estado',estadoSchema);
+module.exports = model("Estado",estadoSchema);

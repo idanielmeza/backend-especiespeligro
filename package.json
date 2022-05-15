@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "nodemon .",
     "start": "node app",
-    "test": "jest"
+    "test": "jest",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.15.0",
     "jest": "^26.1.0",
     "nodemon": "^2.0.11"
   },
@@ -26,8 +29,8 @@
     "mongoose": "^5.13.2",
     "uuid": "^8.3.2"
   },
-  "engines":{
-    "node":"16.13.0",
-    "npm":"8.1.0"
+  "engines": {
+    "node": "16.13.0",
+    "npm": "8.1.0"
   }
 }

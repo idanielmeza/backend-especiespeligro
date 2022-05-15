@@ -1,4 +1,4 @@
-const {model,Schema} = require('mongoose');
+const {model,Schema} = require("mongoose");
 
 const especieSchema = new Schema({
     nombre: {
@@ -13,19 +13,19 @@ const especieSchema = new Schema({
     },
     tipo:{
         type: [Schema.Types.ObjectId],
-        ref: 'Tipo',
+        ref: "Tipo",
     },
     estado:{
         type: [Schema.Types.ObjectId],
-        ref: 'Estado',
+        ref: "Estado",
     },
     habitad:{
         type: [Schema.Types.ObjectId],
-        ref: 'Habitad',
+        ref: "Habitad",
     },
     problematica:{
         type: Number
     }
 });
 
-module.exports = model('Especie',especieSchema);
+module.exports = model("Especie",especieSchema);

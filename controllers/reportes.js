@@ -1,4 +1,4 @@
-const Reporte = require('../models/reporte');
+const Reporte = require("../models/reporte");
 
 
 const getReportes = async (req, res) => {
@@ -7,26 +7,26 @@ const getReportes = async (req, res) => {
     
     let bandera = false;
 
-    if(tipo === 'finalizados'){
+    if(tipo === "finalizados"){
         bandera = true;
-    }else if(tipo === 'noFinalizados'){
+    }else if(tipo === "noFinalizados"){
         bandera = false;
     }
 
-    console.log(bandera)
+    console.log(bandera);
 
     try {
         const [total, reportes] = await Promise.all([
             Reporte.countDocuments({finalizado: bandera}),
             Reporte.find({finalizado: bandera})
-            .skip(Number(desde))
-            .limit(Number(limite))
+                .skip(Number(desde))
+                .limit(Number(limite))
         ]);
 
         if (!reportes) {
             return res.status(404).json({
                 ok: false,
-                msg: 'No se encontraron los reportes'
+                msg: "No se encontraron los reportes"
             });
         }
     
@@ -36,9 +36,9 @@ const getReportes = async (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        res.status(500).json({msg:'Hubo un error'});
+        res.status(500).json({msg:"Hubo un error"});
     }
-}
+};
 
 const getReporte = async (req, res) => {
 
@@ -47,7 +47,7 @@ const getReporte = async (req, res) => {
     if (!reportes) {
         return res.status(404).json({
             ok: false,
-            msg: 'No se encontró el reporte'
+            msg: "No se encontró el reporte"
         });
     }
 
@@ -56,7 +56,7 @@ const getReporte = async (req, res) => {
         reportes
     });
 
-}
+};
 
 const postReportes = async (req, res) => {
     const reporte = new Reporte(req.body);
@@ -70,10 +70,10 @@ const postReportes = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             ok: false,
-            msg: 'Error al crear reporte'
+            msg: "Error al crear reporte"
         });
     }
-}
+};
 
 const putReportes = async (req, res) => {
 
@@ -90,11 +90,11 @@ const putReportes = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             ok: false,
-            msg: 'Error al actualizar reporte'
+            msg: "Error al actualizar reporte"
         });
     }
 
-}
+};
 
 const deleteReportes = async (req, res) => {
 
@@ -110,11 +110,11 @@ const deleteReportes = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             ok: false,
-            msg: 'Error al eliminar reporte'
+            msg: "Error al eliminar reporte"
         });
     }
 
-}
+};
 
 
 module.exports = {
@@ -123,4 +123,4 @@ module.exports = {
     postReportes,
     putReportes,
     deleteReportes
-}
+};

@@ -1,5 +1,5 @@
-const Usuario = require('../models/usuario');
-const bcryptjs = require('bcryptjs');
+const Usuario = require("../models/usuario");
+const bcryptjs = require("bcryptjs");
 
 
 const usuariosGet = async(req,res)=>{
@@ -10,9 +10,9 @@ const usuariosGet = async(req,res)=>{
         const [total, usuarios] = await Promise.all([
             Usuario.countDocuments({estado: true}),
             Usuario.find({estado: true})
-            .skip(Number(desde))
-            .limit(Number(limite))
-        ])
+                .skip(Number(desde))
+                .limit(Number(limite))
+        ]);
     
     
         res.status(200).json({
@@ -20,7 +20,7 @@ const usuariosGet = async(req,res)=>{
             usuarios
         });
     } catch (error) {
-        res.status(500).json({msg:'Hubo un error'});
+        res.status(500).json({msg:"Hubo un error"});
     }
 
     
@@ -42,11 +42,11 @@ const usuariosPut = async(req,res)=>{
 
 
         res.status(201).json({
-            message: 'Usuario Actualizado',
+            message: "Usuario Actualizado",
             usuario
         });
     } catch (error) {
-        res.status(500).json({msg:'Hubo un error'});
+        res.status(500).json({msg:"Hubo un error"});
     }
 
     
@@ -68,11 +68,11 @@ const usuariosPost = async(req,res)=>{
         await usuario.save();
 
         res.status(201).json({
-            message: 'Usuario Creado',
+            message: "Usuario Creado",
             usuario
         });
     } catch (error) {
-        res.status(500).json({msg:'Hubo un error'});
+        res.status(500).json({msg:"Hubo un error"});
     }
 
 };
@@ -84,4 +84,4 @@ module.exports ={
     usuariosPut,
     usuariosPost
 
-}
+};
