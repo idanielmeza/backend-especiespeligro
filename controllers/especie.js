@@ -102,10 +102,33 @@ const putEspecie = async (req, res) => {
     }
 }
 
+const buscadorEspecie = async (req, res) => {
+    try {
+        const { nombre,desde=0, limite=6 } = req.query;
+        const [total, especies] = await Promise.all([
+            Especie.countDocuments({ nombre: new RegExp(nombre, 'i') }),
+            Especie.find({ nombre: new RegExp(nombre, 'i') })
+                .skip(Number(desde))
+                .limit(Number(limite))
+                .populate('tipo')
+                .populate('estado')
+                .populate('habitad')
+        ])
+        res.status(200).json({
+            total,
+            especies
+        });
+
+    } catch (error) {
+        res.status(500).json({ msg: 'Hubo un error' });
+    }
+}
+
 module.exports = {
     getEspecies,
     getEspecie,
     postEspecie,
-    putEspecie
+    putEspecie,
+    buscadorEspecie
 }
 

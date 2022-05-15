@@ -17,7 +17,8 @@ class Server{
             tipos: '/api/tipos',
             habitad: '/api/habitad',
             estado: '/api/estado',
-            especie: '/api/especie'
+            especie: '/api/especie',
+            buscador: '/api/buscador'
         };
 
         //Conectar a db
@@ -60,6 +61,7 @@ class Server{
         this.app.use(this.paths.reportes, require('../routes/reportes'));
         this.app.use(this.paths.estado, require('../routes/estado'));
         this.app.use(this.paths.especie, require('../routes/especie'));
+        this.app.use(this.paths.buscador, require('../routes/buscador'));
     }
 
     listen(){

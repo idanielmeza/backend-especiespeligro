@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const {check} = require('express-validator');
-const {getEspecie,getEspecies,postEspecie,putEspecie} = require('../controllers/especie');
+const {getEspecie,getEspecies,postEspecie,putEspecie, buscadorEspecie} = require('../controllers/especie');
 const {validarCampos} = require('../middlewares/validar-campos');
 
 
@@ -20,6 +20,8 @@ router.post('/', [
     check('estado','El estado es obligatorio').isMongoId(),
     validarCampos
 ],postEspecie);
+
+
 
 router.put('/:id',[
     check('id', 'No es un ID valido').isMongoId(),
