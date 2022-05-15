@@ -71,30 +71,37 @@ classDiagram
 **https://hacktheoceanback.azurewebsites.net/api/reportes/ (método GET).** Regresa todos los reportes en la base de datos.
 **https://hacktheoceanback.azurewebsites.net/api/reportes/:id (método GET).** Regresa el reporte según el id indicado en el parámetro.
 **https://hacktheoceanback.azurewebsites.net/api/reportes/ (método POST).** Agrega un reporte a la base de datos.
-**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método PUT).** Actualiza un reporte en la base de datos.
-| GET reportes | GET reportes/:id |
-| --- | --- |
-|  <img width="686" alt="Screen Shot 2022-05-15 at 10 15 14" src="https://user-images.githubusercontent.com/54159730/168485716-0ea84e7e-6ca8-44e6-a1f3-3e6e21c2deb9.png"> | <img width="686" alt="Screen Shot 2022-05-15 at 10 15 51" src="https://user-images.githubusercontent.com/54159730/168485727-264787f0-abc7-471d-a0e1-f03ae4b56fa0.png"> |
+**https://hacktheoceanback.azurewebsites.net/api/reportes/:id (método PUT).** Actualiza un reporte en la base de datos.
+<img width="686" alt="Screen Shot 2022-05-15 at 10 15 14" src="https://user-images.githubusercontent.com/54159730/168485716-0ea84e7e-6ca8-44e6-a1f3-3e6e21c2deb9.png"> 
 
 #### Tipos
 **https://hacktheoceanback.azurewebsites.net/api/tipos/ (método GET).** Regresa todos los tipos de especies en la base de datos.
 **https://hacktheoceanback.azurewebsites.net/api/tipos/:id (método GET).** Regresa el tipo de especie según el id indicado en el parámetro.
 
 **https://hacktheoceanback.azurewebsites.net/api/tipos/ (método POST).** Agrega un tipo de especie a la base de datos.
-**https://hacktheoceanback.azurewebsites.net/api/tipos/ (método PUT).** Actualiza un tipo de especie en la base de datos.
-| GET tipos | GET tipos/:id |
-| --- | --- |
-|  <img width="686" alt="Screen Shot 2022-05-15 at 10 26 06" src="https://user-images.githubusercontent.com/54159730/168485883-be2e7e7f-c13f-40f6-bf52-f747a6a46887.png"> | <img width="686" alt="Screen Shot 2022-05-15 at 10 26 27" src="https://user-images.githubusercontent.com/54159730/168485885-366e569c-09d5-4050-9b54-2e8c16c28dc5.png"> |
+**https://hacktheoceanback.azurewebsites.net/api/tipos/:id (método PUT).** Actualiza un tipo de especie en la base de datos.
+<img width="686" alt="Screen Shot 2022-05-15 at 10 26 06" src="https://user-images.githubusercontent.com/54159730/168485883-be2e7e7f-c13f-40f6-bf52-f747a6a46887.png">
 
 #### Habitad
 **https://hacktheoceanback.azurewebsites.net/api/habitad/ (método GET).** Regresa todos las habitats en la base de datos.
 **https://hacktheoceanback.azurewebsites.net/api/habitad/:id (método GET).** Regresa el habitat según el id indicado en el parámetro.
-
 **https://hacktheoceanback.azurewebsites.net/api/habitad/ (método POST).** Agrega un habitat a la base de datos.
-**https://hacktheoceanback.azurewebsites.net/api/habitad/ (método PUT).** Actualiza un habitat en la base de datos.
-| GET tipos | GET tipos/:id |
-| --- | --- |
-|  <img width="686" alt="Screen Shot 2022-05-15 at 10 29 30" src="https://user-images.githubusercontent.com/54159730/168486081-59154f10-2622-4834-a3ca-f429db967fb4.png"> | <img width="686" alt="Screen Shot 2022-05-15 at 10 26 27" src="https://user-images.githubusercontent.com/54159730/168485885-366e569c-09d5-4050-9b54-2e8c16c28dc5.png"> |
+**https://hacktheoceanback.azurewebsites.net/api/habitad/:id (método PUT).** Actualiza un habitat en la base de datos.
+<img width="686" alt="Screen Shot 2022-05-15 at 10 29 30" src="https://user-images.githubusercontent.com/54159730/168486081-59154f10-2622-4834-a3ca-f429db967fb4.png">
+
+#### Estado
+**https://hacktheoceanback.azurewebsites.net/api/estado/ (método GET).** Regresa todos los estados en la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/estado/:id (método GET).** Regresa el estado según el id indicado en el parámetro.
+**https://hacktheoceanback.azurewebsites.net/api/estado/ (método POST).** Agrega un estado a la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/estado/:id (método PUT).** Actualiza un estado en la base de datos.
+<img width="642" alt="Screen Shot 2022-05-15 at 10 34 37" src="https://user-images.githubusercontent.com/54159730/168486218-a2fabdda-ced6-42bb-8b70-4515755c6cf4.png">
+
+#### Especie
+**https://hacktheoceanback.azurewebsites.net/api/especie/ (método GET).** Regresa todos las especies en la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/especie/:id (método GET).** Regresa la especie según el id indicado en el parámetro.
+**https://hacktheoceanback.azurewebsites.net/api/especie/ (método POST).** Agrega una especie a la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/especie/:id (método PUT).** Actualiza una especie en la base de datos.
+<img width="686" alt="Screen Shot 2022-05-15 at 10 38 32" src="https://user-images.githubusercontent.com/54159730/168486377-bbecc065-fbc2-4796-a6fd-3a1884349d4f.png">
 
 
 ### Pruebas Unitarias
