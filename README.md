@@ -67,4 +67,6 @@ Se realizaron pruebas unitarias, implementadas mediante Jest, al módulo de help
 
 <img width="356" alt="Screen Shot 2022-05-15 at 8 23 16" src="https://user-images.githubusercontent.com/54159730/168480529-6ee7ea50-8d28-41f8-98d0-7e47fc924fac.png">
 
-Recordar ejecutar ```npm install``` para reconstruir los modules de Node
+Para instalar las dependencias con el repositorio solo corre el comando:
+>npm install
+ 
