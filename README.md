@@ -68,13 +68,22 @@ classDiagram
 
 ### Endpoints
 #### Reportes
-**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método GET)** Regresa todos los reportes en la base de datos.
-**https://hacktheoceanback.azurewebsites.net/api/reportes/:id (método GET)** Regresa el reporte según el id indicado en el parámetro.
-**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método POST)** Agrega un reporte a la base de datos.
-**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método PUT)** Actualiza un reporte en la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método GET).** Regresa todos los reportes en la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/reportes/:id (método GET).** Regresa el reporte según el id indicado en el parámetro.
+**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método POST).** Agrega un reporte a la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método PUT).** Actualiza un reporte en la base de datos.
 | GET reportes | GET reportes/:id |
 | --- | --- |
 |  <img width="686" alt="Screen Shot 2022-05-15 at 10 15 14" src="https://user-images.githubusercontent.com/54159730/168485716-0ea84e7e-6ca8-44e6-a1f3-3e6e21c2deb9.png"> | <img width="686" alt="Screen Shot 2022-05-15 at 10 15 51" src="https://user-images.githubusercontent.com/54159730/168485727-264787f0-abc7-471d-a0e1-f03ae4b56fa0.png"> |
+
+#### Tipos
+**https://hacktheoceanback.azurewebsites.net/api/tipos/ (método GET).** Regresa todos los tipos de especies en la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/tipos/:id (método GET).** Regresa el tipo de especie según el id indicado en el parámetro.
+**https://hacktheoceanback.azurewebsites.net/api/tipos/ (método POST).** Agrega un tipo de especie a la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/tipos/ (método PUT).** Actualiza un tipo de especie en la base de datos.
+| GET tipos | GET tipos/:id |
+| --- | --- |
+|  <img width="686" alt="Screen Shot 2022-05-15 at 10 26 06" src="https://user-images.githubusercontent.com/54159730/168485883-be2e7e7f-c13f-40f6-bf52-f747a6a46887.png"> | <img width="686" alt="Screen Shot 2022-05-15 at 10 26 27" src="https://user-images.githubusercontent.com/54159730/168485885-366e569c-09d5-4050-9b54-2e8c16c28dc5.png"> |
 
 ### Pruebas Unitarias
 Se realizaron pruebas unitarias, implementadas mediante Jest, al módulo de helpers, como el método de subir archivo, así como a los controladores, es decir, los métodos de la clase especie, estado, habitad, tipo y uploads.
