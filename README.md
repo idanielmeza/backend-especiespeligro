@@ -21,6 +21,10 @@ En lugar de guardar los datos en tablas, tal y como se hace en las bases de dato
 
 Express es un marco de aplicación web Node.js mínimo y flexible que proporciona un sólido conjunto de características para aplicaciones web y móviles.
 
+**ESLint**
+
+Herramienta de código abierto enfocada en el proceso de "lintig" para JavaScript, siendo la más predominante para la tarea de "limpiar" código JavaScript tanto en el servidor (NodeJS) como en el navegador.
+
 ### Modelado de la API
 
 ```mermaid
@@ -66,6 +70,10 @@ classDiagram
 Se realizaron pruebas unitarias, implementadas mediante Jest, al módulo de helpers, como el método de subir archivo, así como a los controladores, es decir, los métodos de la clase especie, estado, habitad, tipo y uploads.
 
 <img width="356" alt="Screen Shot 2022-05-15 at 8 23 16" src="https://user-images.githubusercontent.com/54159730/168480529-6ee7ea50-8d28-41f8-98d0-7e47fc924fac.png">
+
+### GitHub Actions & Azure
+![github actions](https://static.gunnarpeipman.com/wp-content/uploads/2020/05/azure-static-web-app.png)
+
 
 Para instalar las dependencias con el repositorio solo corre el comando:
 >npm install
