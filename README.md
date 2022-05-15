@@ -66,6 +66,16 @@ classDiagram
     Reporte : +Enviar Reporte()
 ```
 
+### Endpoints
+#### Reportes
+**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método GET)** Regresa todos los reportes en la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/reportes/:id (método GET)** Regresa el reporte según el id indicado en el parámetro.
+**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método POST)** Agrega un reporte a la base de datos.
+**https://hacktheoceanback.azurewebsites.net/api/reportes/ (método PUT)** Actualiza un reporte en la base de datos.
+| GET reportes | GET reportes/:id |
+| --- | --- |
+|  <img width="686" alt="Screen Shot 2022-05-15 at 10 15 14" src="https://user-images.githubusercontent.com/54159730/168485716-0ea84e7e-6ca8-44e6-a1f3-3e6e21c2deb9.png"> | <img width="686" alt="Screen Shot 2022-05-15 at 10 15 51" src="https://user-images.githubusercontent.com/54159730/168485727-264787f0-abc7-471d-a0e1-f03ae4b56fa0.png"> |
+
 ### Pruebas Unitarias
 Se realizaron pruebas unitarias, implementadas mediante Jest, al módulo de helpers, como el método de subir archivo, así como a los controladores, es decir, los métodos de la clase especie, estado, habitad, tipo y uploads.
 
