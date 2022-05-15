@@ -64,6 +64,7 @@ classDiagram
 
 ### Pruebas Unitarias
 Se realizaron pruebas unitarias, implementadas mediante Jest, al módulo de helpers, como el método de subir archivo, así como a los controladores, es decir, los métodos de la clase especie, estado, habitad, tipo y uploads.
+
 <img width="356" alt="Screen Shot 2022-05-15 at 8 23 16" src="https://user-images.githubusercontent.com/54159730/168480529-6ee7ea50-8d28-41f8-98d0-7e47fc924fac.png">
 
 Recordar ejecutar ```npm install``` para reconstruir los modules de Node
